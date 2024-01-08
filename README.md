@@ -1,0 +1,2 @@
+# EasyBuy
+MERN Ecommerce
