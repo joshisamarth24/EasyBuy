@@ -185,7 +185,7 @@ const Cart = () => {
   const createCheckoutSession = async (line_items) => {
     try {
 
-      const res = await axios.post('http://localhost:5000/api/checkout/create-checkout-session', {line_items});
+      const res = await axios.post('https://easybuy-gl09.onrender.com/api/checkout/create-checkout-session', {line_items});
       window.location.replace(res.data);
 
     } catch (error) {
