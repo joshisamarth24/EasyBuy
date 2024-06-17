@@ -6,7 +6,7 @@ const stripeInstance = stripe(process.env.STRIPE_KEY);
 
 const router = Router();
 
-const YOUR_DOMAIN = 'http://localhost:5173';
+const YOUR_DOMAIN = 'https://easy-buy-virid.vercel.app';
 
 router.post('/create-checkout-session', cors(), async (req, res) => {
     try{
