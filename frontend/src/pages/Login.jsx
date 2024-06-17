@@ -24,7 +24,7 @@ const Login = ({setShowLogin,setShowRegister}) => {
   const getUserOrders = async (userId, token) => {
     dispatch(getOrdersStart());
     try {
-      const res = await fetch(`http://localhost:5000/api/orders/${userId}`, {
+      const res = await fetch(`https://easybuy-34kz.onrender.com/api/orders/${userId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -45,7 +45,7 @@ const Login = ({setShowLogin,setShowRegister}) => {
     e.preventDefault();
     dispatch(loginStart());
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://easybuy-34kz.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const Login = ({setShowLogin,setShowRegister}) => {
         toast.error(data.error);
       } else {
         dispatch(loginSuccess({ user: data.existingUser, token: data.token }));
-        const cart = await fetch(`http://localhost:5000/api/cart/${data.existingUser._id}`, {
+        const cart = await fetch(`https://easybuy-34kz.onrender.com/api/cart/${data.existingUser._id}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

@@ -24,7 +24,7 @@ const Profile = () => {
   };
   const handleUpdate = async(formData) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/users/${currentUser._id}`, {
+      const res = await fetch(`https://easybuy-34kz.onrender.com/api/users/${currentUser._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

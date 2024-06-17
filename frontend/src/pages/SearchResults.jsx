@@ -13,7 +13,7 @@ const SearchResults = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/products/search?query=${query}`);
+        const res = await fetch(`https://easybuy-34kz.onrender.com/api/products/search?query=${query}`);
         const data = await res.json();
         setProducts(data);
         setLoading(false);

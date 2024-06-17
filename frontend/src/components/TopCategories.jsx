@@ -12,7 +12,7 @@ const Categories = () => {
   const getCategories = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/category/allCategories"
+        "https://easybuy-34kz.onrender.com/api/category/allCategories"
       );
       setCategories(res.data);
     } catch (error) {

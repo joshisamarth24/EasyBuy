@@ -73,7 +73,7 @@ const Cart = () => {
     }
     dispatch(addAddress(newAddress));
     try {
-      const res = await fetch(`http://localhost:5000/api/users/${userId}`, {
+      const res = await fetch(`https://easybuy-34kz.onrender.com/api/users/${userId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ const Cart = () => {
         },
         quantity: product.quantity,
       }));
-      const res = await axios.post('http://localhost:5000/api/checkout/create-checkout-session', { line_items });
+      const res = await axios.post('https://easybuy-34kz.onrender.com/api/checkout/create-checkout-session', { line_items });
       window.location.replace(res.data);
     } catch (error) {
       console.log(error);

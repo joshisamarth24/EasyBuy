@@ -77,7 +77,7 @@ const Register = ({ setShowLogin, setShowRegister }) => {
       if(user.profilePicture !== ''){
       handleImageUpload(user.profilePicture);
       }
-      const res = await fetch('http://localhost:5000/api/auth/register', {
+      const res = await fetch('https://easybuy-34kz.onrender.com/api/auth/register', {
         method: 'POST',
         body: JSON.stringify({...user, profilePicture: uploadedImage}),
         headers: {

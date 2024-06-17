@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      let res = await fetch(`http://localhost:5000/api/cart/update/${user._id}`, {
+      let res = await fetch(`https://easybuy-34kz.onrender.com/api/cart/update/${user._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

@@ -13,8 +13,6 @@ const Home = () => {
   return (
     <>
       <Navbar />
-      {/* <Header/> */}
-      {/* <Announcements /> */}
       <Slider />
       <Categories />
       <TopCategories />

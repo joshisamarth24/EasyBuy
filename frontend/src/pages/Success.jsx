@@ -37,7 +37,7 @@ const Success = () => {
 
   const updateCart = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/cart/update/${currentUser?._id}`, {
+      const res = await fetch(`https://easybuy-34kz.onrender.com/api/cart/update/${currentUser?._id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const Success = () => {
 
   const createOrder = async () => {
     try {
-      const res = await axios.post('http://localhost:5000/api/orders/placeOrder', {
+      const res = await axios.post('https://easybuy-34kz.onrender.com/api/orders/placeOrder', {
         userId: currentUser?._id,
         products: cart?.items?.map((item) => ({ ProductId: item._id, quantity: item.quantity })),
         amount: cart?.totalPrice,
