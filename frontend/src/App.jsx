@@ -6,7 +6,7 @@ import ProductList from "./pages/ProductList"
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Cart from './pages/Cart'
-import { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import Success from './pages/Success';
 import { useNavigate } from 'react-router-dom';
 import Profile from './pages/Profile';
